@@ -13,6 +13,9 @@ function Shop(){
       setClothes(newClothes);
    }
 
+   const allClothes = () =>{
+      setClothes(data)
+   }
    const chosenPet = (pet) =>{
       const onlyPet = data.filter(element => element.pet === pet);
       setClothes(onlyPet);
@@ -20,7 +23,7 @@ function Shop(){
 
    return(
       <div className="parent" >
-         <Buttons chosenPet = {chosenPet} petClothes= {chosenClothes}/>
+         <Buttons chosenPet = {chosenPet} petClothes= {chosenClothes} allClothes ={allClothes}/>
          <Clothes itemsForSale = {clothes} />
       </div>
    )
